@@ -1,0 +1,95 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantie de gestion des tailles de manière prévisible */
+}
+
+/* Styles de base du body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;  /* Fond clair pour le corps */
+    color: #333; /* Couleur du texte générale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    margin: 0;
+}
+
+/* Conteneur principal */
+.container {
+    margin-top: 20%;
+    background-color: #ffffff; /* Fond blanc pour le conteneur */
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner du relief */
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    margin: 20px;
+    overflow: hidden;
+    font-size: 18px; /* Taille de texte pour le contenu */
+}
+
+/* Titre principal (h1) */
+.container h1 {
+    font-size: 32px;
+    color: #2c3e50;
+    text-align: center; /* Centré horizontalement */
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Style des paragraphes */
+.container p {
+    line-height: 1.8; /* Interligne plus large pour la lisibilité */
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify; /* Justifie le texte pour un alignement net */
+}
+
+/* Première lettre du paragraphe */
+.container p:first-letter {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2980b9; /* Couleur bleue pour la première lettre */
+}
+
+/* Mise en évidence des éléments */
+.container .highlight {
+    font-weight: bold;
+    color: #2980b9; /* Couleur bleue pour les points clés */
+}
+
+/* Améliorations pour les petits écrans */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 28px; /* Taille du titre réduite sur petits écrans */
+    }
+
+    .container p {
+        font-size: 16px; /* Taille du texte réduite sur petits écrans */
+    }
+
+    /* Empêche la surchauffe des marges sur petits écrans */
+    .container {
+        margin: 10px;
+    }
+}
+
+/* Pour très petits écrans (mobiles) */
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 24px; /* Réduit encore la taille du titre sur très petits écrans */
+    }
+
+    .container p {
+        font-size: 14px; /* Réduit la taille du texte pour la lecture mobile */
+    }
+}

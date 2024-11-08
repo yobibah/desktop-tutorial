@@ -1,0 +1,133 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 4px 4px 4px 1px #87B1DB;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-left: 50%;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    transition: border-bottom-width 0.5s, border-bottom-style 0.5s, border-bottom-color 0.5s, transform 0.5s;
+    transform: scale(1.2);
+}
+
+li a:hover {
+    border-bottom-width: auto;
+    border-bottom-style: solid;
+    border-bottom-color: #87B1DB;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.active {
+    border-bottom-width: auto;
+    border-bottom-style: solid;
+    border-bottom-color: #87B1DB;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Styles pour le bouton burger */
+.menu-toggle {
+    font-size: 24px;
+    border: none;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    display: none; /* Masquer sur les grands écrans */
+}
+
+/* Styles pour la liste de menu */
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sur les petits écrans */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        display: inline-block;
+        list-style: none;
+        gap: 20px;
+        margin-left: 50%;
+    }
+
+    .menu img {
+        width: 40px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-list {
+        display: none; /* Cacher la liste du menu par défaut */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-list.active {
+        display: flex; /* Afficher la liste lorsque "active" est ajouté */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher le bouton burger */
+    }
+
+    /* Réduction de la taille du texte du menu */
+    li a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    li a:hover {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: #87B1DB;
+    }
+}

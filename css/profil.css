@@ -1,0 +1,68 @@
+.p{
+    display: none;
+}
+.p:hover{
+    display: flex;
+}
+
+.profil {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    height: 300px;
+    
+
+}
+
+
+.profil p {
+    margin: 10px 0;
+}
+
+.profil a {
+    color: #fff;
+    text-decoration: none;
+}
+.btn1{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    float: right;
+    user-select: none;
+}
+
+.btn2{
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    user-select: none;
+}
+.btn1:hover{
+    background-color: #dc3545;
+
+}
+.btn2:hover{
+    background-color: #0069d9;
+}
+.profil img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
